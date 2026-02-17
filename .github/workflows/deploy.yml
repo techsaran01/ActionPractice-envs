@@ -51,3 +51,15 @@ jobs:
           echo "..."
           echo "MONGODB_USERNAME:- ${{env.MONGODB_USERNAME}}"
           echo "MONGODB_DB_NAME:- ${{env.MONGODB_DB_NAME}}"
+
+      - name: Env vars from store
+        run: |        
+          echo "..."
+          echo "ENV_VAR1:- ${{env.MONGODB_USERNAME}}"
+          echo "ENV_VAR2:- ${{env.MONGODB_USERNAME}}"
+
+      - name: Secrets information from store
+        run: |        
+          echo "..."
+          echo "ENV_VAR1:- ${{secrets.ENV_VAR1}}"
+          echo "ENV_VAR2:- ${{secrets.ENV_VAR2}}"
